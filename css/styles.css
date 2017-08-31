@@ -104,10 +104,25 @@ body {
 
 .banner {
     align-items: center;
-    background: #FFEDCF;
+    background-image: url(../img/fortworthskyline.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     height: 550px;
+}
+
+@media (max-width: 900px) {
+    .banner {
+        height: 510px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner {
+        height: 427px;
+    }
 }
 
 .banner-content {  
@@ -115,7 +130,7 @@ body {
     color: #6D92B2;
     padding: 40px 60px;
     text-align: center;
-    max-width: 500px;   
+    max-width: 50%;   
 }
 
 .main {
