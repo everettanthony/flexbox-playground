@@ -1,2 +1,2 @@
-# flexbox-playground
-Single page of flex box play. 
+# Flexbox Playground
+Single page of Flexbox tinkering fun. 
