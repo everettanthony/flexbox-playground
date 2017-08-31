@@ -1,9 +1,12 @@
-// JS Action
+// Mobile Navigation Open and Close
 
-const mblNav = document.querySelector('.menu-icon');
-const bWidth = window.innerWidth;
+const mblNav = function() {
+	const btnMblNav = document.querySelector('.menu-icon');
 
-mblNav.addEventListener( 'click', e => {
-	mblNav.classList.toggle('active');
-	document.body.classList.toggle('nav-in');
-});
+	btnMblNav.addEventListener( 'click', e => {
+		btnMblNav.classList.toggle('active');
+		document.body.classList.toggle('nav-in');
+	});
+}
+
+mblNav();

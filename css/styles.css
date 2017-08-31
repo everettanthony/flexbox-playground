@@ -1,3 +1,5 @@
+/* Core Styles */
+
 html {
     height: 100%;
 }
@@ -15,6 +17,8 @@ body {
     flex-direction: column;
     min-height: calc(100vh - 90px);
 }
+
+/* Primary Navigation */
 
 .navigation {
     background: #6D92B2;
@@ -102,6 +106,8 @@ body {
     }
 }
 
+/* Banner Image */
+
 .banner {
     align-items: center;
     background-image: url(../img/fortworthskyline.jpg);
@@ -133,10 +139,14 @@ body {
     max-width: 50%;   
 }
 
+/* Main Content */
+
 .main {
     padding: 1.7em;
     text-align: center;
 }
+
+/* News */
 
 .news {
     align-items: stretch;
@@ -167,6 +177,8 @@ body {
     background: #CFE8FF;
     color: #6D92B2;
 }
+
+/* Gallery */
 
 .gallery {
     background: #FFEDCF;
@@ -210,6 +222,8 @@ body {
     width: 100%;  
 }
 
+/* Services */
+
 .services {
     align-items: center;
     background: #CFE8FF;
@@ -228,6 +242,8 @@ body {
     padding: 20px 40px;
     width: 280px;
 }
+
+/* Gallery Two */
 
 .galleryTwo {
     background: #FFEDCF;
@@ -262,6 +278,8 @@ body {
     background: #CFE8FF;
     color: #6D92B2;
 }
+
+/* Footer */
 
 footer {   
     background: #6D92B2;
