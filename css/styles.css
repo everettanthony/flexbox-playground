@@ -34,7 +34,11 @@ body {
     background: #5b7c99;
 }
 
-@media all and (max-width: 800px) {
+.menu-icon {
+    display: none;
+}
+
+@media all and (max-width: 900px) {
     .navigation {
         justify-content: space-around;
     }
@@ -44,6 +48,15 @@ body {
     .navigation {
         flex-flow: column wrap;
         padding: 0;
+        position: absolute;
+        top: 51px;
+        transform: translateY(-100%);
+        transition: transform .2s ease-out;
+        width: 100%;
+    }
+
+    body.nav-in .navigation {
+        transform: translateY(0);
     }
 
     .navigation a { 
@@ -55,6 +68,25 @@ body {
 
     .navigation a:last-of-type {
         border-bottom: none;
+    }
+
+    .menu-icon {
+        background: #5b7c99;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        outline: 0;
+        padding: 15px 12px;
+        text-transform: uppercase;
+        z-index: 999;
+    }
+
+    .menu-icon.active {
+        background: #293b4b;
     }
 }
 
