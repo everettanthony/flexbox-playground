@@ -184,8 +184,9 @@ footer ul {
     justify-content: center;
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 footer ul li {
-    margin: 0 10px 0 0;
+    margin: 5px;
 }
