@@ -202,6 +202,40 @@ body {
     width: 280px;
 }
 
+.galleryTwo {
+    background: #FFEDCF;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+}
+
+.galleryTwo .parent {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 90%;
+    padding: 0.25rem;
+}
+
+.galleryTwo .child {
+    flex: 1 0 25%;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 0.25rem;
+}
+
+.galleryTwo .child > div {
+    background: #6D92B2;
+    color: #FFF6E9;
+    height: 200px;
+    padding: 40px;
+}
+
+.galleryTwo .child:nth-child(2n) > div {
+    background: #CFE8FF;
+    color: #6D92B2;
+}
+
 footer {   
     background: #6D92B2;
     color: #FFF6E9;
