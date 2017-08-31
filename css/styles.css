@@ -34,17 +34,29 @@ body {
     background: #5b7c99;
 }
 
+.navigation a.logo {
+    margin-right: auto;
+}
+
+.navigation a.logo:hover {
+    background: none;
+}
+
 .menu-icon {
     display: none;
 }
 
-@media all and (max-width: 900px) {
+@media (max-width: 900px) {
     .navigation {
         justify-content: space-around;
     }
+
+    .navigation a.logo {
+        display: none;
+    }
 }
 
-@media all and (max-width: 600px) {
+@media (max-width: 600px) {
     .navigation {
         flex-flow: column wrap;
         padding: 0;
