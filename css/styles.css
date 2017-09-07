@@ -20,7 +20,8 @@ body {
   /* News */
   /* Gallery */
   /* Services */
-  /* Gallery Two */ }
+  /* Gallery Two */
+  /* Gallery Three */ }
   .container .navigation {
     background: #6D92B2;
     display: flex;
@@ -188,6 +189,37 @@ body {
         .container .galleryTwo .parent .child:nth-child(2n) div {
           background: #CFE8FF;
           color: #6D92B2; }
+  .container .galleryThree {
+    padding: 30px;
+    position: relative; }
+    .container .galleryThree-content {
+      align-items: flex-start;
+      display: flex;
+      flex-flow: column wrap;
+      height: 600px;
+      justify-content: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: yellow; }
+    .container .galleryThree-item {
+      background: #6D92B2;
+      color: #FFF6E9;
+      height: 150px;
+      margin: 0;
+      width: 26.7%;
+      overflow: hidden;
+      padding: 40px; }
+      .container .galleryThree-item:nth-child(2) {
+        background: #CFE8FF;
+        color: #6D92B2;
+        height: 290px; }
+      .container .galleryThree-item:nth-child(3) {
+        background: #3e5c76;
+        height: 600px; }
+      .container .galleryThree-item:nth-child(4) {
+        background: #CFE8FF;
+        color: #6D92B2;
+        height: 290px; }
 
 /* Footer */
 footer {

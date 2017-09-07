@@ -279,6 +279,51 @@ body {
 			}
 		}
 	}
+
+	/* Gallery Three */
+
+	.galleryThree {
+	    padding: 30px;
+	    position: relative;
+
+		&-content {
+			align-items: flex-start;
+		    display: flex;
+		    flex-flow: column wrap;
+		    height: 600px;
+		    justify-content: flex-start;
+		    max-width: 1200px;
+		    margin: 0 auto;
+		    background: yellow;
+		}
+
+		&-item {
+		    background: #6D92B2;
+		    color: #FFF6E9;
+		    height: 150px;
+		    margin: 0;
+		    width: 26.7%;
+		    overflow: hidden;
+		    padding: 40px;
+
+		    &:nth-child(2) {
+			    background: #CFE8FF;
+			    color: #6D92B2;
+		    	height: 290px;
+		    }
+
+		    &:nth-child(3) {
+		    	background: #3e5c76;
+		    	height: 600px;
+		    }
+
+		    &:nth-child(4) {
+			    background: #CFE8FF;
+			    color: #6D92B2;
+		    	height: 290px;
+		    }
+		}
+	}
 }
 
 /* Footer */
