@@ -3,10 +3,13 @@ html {
   height: 100%; }
 
 body {
-  font-family: arial, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   height: 100%;
   margin: 0;
   padding: 0; }
+
+h1, h2, h3, h4 {
+  font-weight: 700; }
 
 /* Main Container */
 .container {
@@ -199,8 +202,12 @@ body {
       height: 600px;
       justify-content: flex-start;
       max-width: 1200px;
-      margin: 0 auto;
-      background: yellow; }
+      margin: 0 auto; }
+    @media (max-width: 1200px) {
+      .container .galleryThree-content {
+        align-items: center;
+        justify-content: center;
+        height: auto; } }
     .container .galleryThree-item {
       background: #6D92B2;
       color: #FFF6E9;
@@ -220,6 +227,9 @@ body {
         background: #CFE8FF;
         color: #6D92B2;
         height: 290px; }
+    @media (max-width: 1200px) {
+      .container .galleryThree-item {
+        width: 76.7%; } }
 
 /* Footer */
 footer {

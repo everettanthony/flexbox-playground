@@ -5,10 +5,14 @@ html {
 }
 
 body {
-    font-family: arial, sans-serif;
+    font-family: 'PT Sans', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 700;
 }
 
 /* Main Container */
@@ -294,7 +298,14 @@ body {
 		    justify-content: flex-start;
 		    max-width: 1200px;
 		    margin: 0 auto;
-		    background: yellow;
+		}
+
+		@media (max-width: 1200px) {
+		    &-content {
+    			align-items: center;
+    			justify-content: center;
+    			height: auto;
+		    }
 		}
 
 		&-item {
@@ -321,6 +332,12 @@ body {
 			    background: #CFE8FF;
 			    color: #6D92B2;
 		    	height: 290px;
+		    }
+		}
+
+		@media (max-width: 1200px) {
+		    &-item {
+		    	width: 76.7%;
 		    }
 		}
 	}
