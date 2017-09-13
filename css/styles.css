@@ -24,7 +24,8 @@ h1, h2, h3, h4 {
   /* Gallery */
   /* Services */
   /* Gallery Two */
-  /* Gallery Three */ }
+  /* Gallery Three */
+  /* Masonry Grid */ }
   .container .navigation {
     background: #6D92B2;
     display: flex;
@@ -230,6 +231,68 @@ h1, h2, h3, h4 {
     @media (max-width: 1200px) {
       .container .galleryThree-item {
         width: 76.7%; } }
+  .container .masonry {
+    background: #FFEDCF;
+    padding: 50px; }
+    .container .masonry-grid {
+      align-content: flex-start;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1170px; }
+    .container .masonry-card {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px 0px rgba(110, 123, 140, 0.3);
+      flex: auto;
+      height: 320px;
+      margin: 7px;
+      position: relative;
+      width: 320px; }
+      .container .masonry-card.wide {
+        width: 480px; }
+      .container .masonry-card img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%; }
+      .container .masonry-card .info-center {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.3);
+        bottom: 0;
+        color: white;
+        display: flex;
+        font-size: 24px;
+        font-weight: bold;
+        justify-content: center;
+        left: 0;
+        padding: 0 10px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        top: 0; }
+    .container .masonry-card-half {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px 0px rgba(110, 123, 140, 0.3);
+      display: flex;
+      flex-flow: column wrap;
+      flex: auto;
+      height: 320px;
+      justify-content: flex-end;
+      margin: 7px;
+      width: 320px; }
+      .container .masonry-card-half.wide {
+        width: 480px; }
+      .container .masonry-card-half .card-img {
+        flex: auto;
+        height: 160px;
+        position: relative; }
+        .container .masonry-card-half .card-img img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%; }
+      .container .masonry-card-half .card-text {
+        padding: 0 20px; }
 
 /* Footer */
 footer {
