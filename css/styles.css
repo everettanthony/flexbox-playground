@@ -40,6 +40,7 @@ button, hr, input {
   /* Masonry Grid */
   /* Accordion */
   /* Info Cards */
+  /* One More Grid */
   /* Contact Us */ }
   .container .navigation {
     background: #6D92B2;
@@ -386,6 +387,40 @@ button, hr, input {
         text-decoration: none;
         background-color: #aaa;
         color: #fff; }
+  .container .one-more-grid {
+    background: #6D92B2;
+    padding: 40px 20px; }
+    .container .one-more-grid-container {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .container .one-more-grid-item {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      width: 100%; }
+      @media (min-width: 600px) {
+        .container .one-more-grid-item {
+          width: 50%; } }
+      @media (min-width: 1170px) {
+        .container .one-more-grid-item {
+          width: 33%; } }
+      .container .one-more-grid-item figure {
+        background: #fff;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        position: relative; }
+      .container .one-more-grid-item img {
+        display: block;
+        width: 100%; }
+      .container .one-more-grid-item figcaption {
+        color: #444;
+        padding: 8px 16px 16px; }
+      .container .one-more-grid-item header {
+        margin: 16px 16px 0; }
+      .container .one-more-grid-item h2 {
+        margin: 0;
+        padding: 0 0 0; }
   .container .contact {
     background: #3e5c76;
     color: #FFF6E9;

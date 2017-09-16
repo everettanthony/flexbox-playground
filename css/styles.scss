@@ -561,6 +561,62 @@ button, hr, input {
 		}
 	}
 
+
+	/* One More Grid */
+
+	.one-more-grid {
+		background: #6D92B2;
+		padding: 40px 20px;
+		
+		&-container {
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+    	}
+
+		&-item {
+			display: flex;
+			justify-content: center;
+			padding: 10px;
+			width: 100%;
+
+			@media (min-width: 600px) {
+			    width: 50%;
+			}
+
+			@media (min-width: 1170px) {
+			  	width: 33%;
+			}
+
+			figure {
+				background: #fff;
+				box-shadow: 0 2px 3px rgba(black,0.1);
+				position: relative;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+			}
+
+			figcaption {
+				color: #444;
+				padding: 8px 16px 16px;
+			}
+
+		    header {
+		    	margin: 16px 16px 0;
+		    }
+
+			h2 {
+				margin: 0;
+				padding: 0 0 0;
+			}
+		}
+	}
+
+
 	/* Contact Us */
 
 	.contact {
