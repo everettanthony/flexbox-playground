@@ -1,3 +1,13 @@
-# Ignore docs files
-styles/.sass-cache
-styles/.sass-cache/*
+#Items to ignore in GIT
+
+#Ignore .tmp folder and files
+.tmp/
+
+#Ignore the SASS Cache
+.sass-cache/
+
+#Ignore node_modules
+node_modules/
+
+#Mac
+.DS_Store
