@@ -1,0 +1,249 @@
+﻿// ------------------------
+// Define row-cols-x layout
+//
+// Example Use:
+// <div class="row row-cols-3">
+//   <div class="col"></div>
+//   <div class="col"></div>
+//   <div class="col"></div>
+// </div>
+// ------------------------
+.row {
+    @include container(100%);
+}
+
+@for $col from 1 through $total-columns {
+    .row-cols-#{$col} {
+        .col {
+            // By default, always be full width - mobile first
+            @include full;
+            margin-bottom: gutter() * 2.75;
+            padding: 0;
+
+            // At tabletPlus, start to resize
+            @include susy-media($bp-tablet) {
+                @include nobreak;
+                @include span(($total-columns / $col) of $total-columns);
+                margin-bottom: 0;
+
+                &:not(:first-child) {
+                    &:last-child {
+                        @include last;
+                    }
+                }
+            }
+        }
+    }
+
+    .row {
+        .col-#{$col} {
+            // By default, always be full width - mobile first
+            @include full;
+            margin-bottom: gutter() * 2.75;
+            padding: 0;
+
+            // At tabletPlus, start to resize
+            @include susy-media($bp-tablet) {
+                @include nobreak;
+                @include span($col);
+                margin-bottom: 0;
+
+                &:not(:first-child) {
+                    &:last-child {
+                        @include last;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ----------------------------------
+// Additional styles
+// ----------------------------------
+.l-content-container {
+    @extend .clearfix;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width-px;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    position: relative;
+
+    .l-content-block & {
+        padding: 0;
+
+        @include susy-media($bp-tablet) {
+            padding: 0 2rem;
+        }
+    }
+
+    @include susy-media($bp-tablet) {
+        padding: 0 2rem;
+    }
+
+    &.is-med {
+        max-width: 80rem;
+    }
+
+    &.is-xmed {
+        max-width: 68rem;
+    }
+
+    &.is-narrow {
+        max-width: 55rem;
+    }
+
+    &.white {
+        background: #fff;
+        border-left: 1px solid #f2f2f2;
+        border-right: 1px solid #f2f2f2;
+        max-width: calc($max-width-px + 2px);
+        padding: 0;
+
+        &.with-pad {
+            padding: 0 1.5rem;
+
+            @include susy-media($bp-tablet) {
+                padding: 0 2rem;
+            }
+
+            @include susy-media($bp-xwide) {
+                padding: 0 4rem;
+            }
+        }
+    }
+
+    .with-nav & {
+        padding-top: 2rem;
+
+        @include susy-media($bp-wide) {
+            padding-top: 3rem;
+        }
+
+        @include susy-media($bp-xwide) {
+            padding-top: 4rem;
+        }
+
+        &.with-pad {
+            padding: 2rem 1.5rem;
+
+            @include susy-media($bp-tablet) {
+                padding: 2rem;
+            }
+
+            @include susy-media($bp-wide) {
+                padding: 3rem 2rem;
+            }
+
+            @include susy-media($bp-xwide) {
+                padding: 4rem;
+            }
+        }
+    }
+}
+
+.l-content-block {
+    background: #fff;
+    padding: 3rem 1.5rem;
+    position: relative;
+
+    &[class*="row"] {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &.with-nav {
+        padding: 0 !important;
+    }
+
+    &.mbl-full {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include susy-media($bp-tablet) {
+        padding: 3rem 0;
+    }
+
+    @include susy-media($bp-large) {
+        padding: 4rem;
+
+        &-sm {
+            padding: 2rem 0;
+        }
+    }
+
+    @include susy-media($bp-wide) {
+        padding: 5rem 0;
+
+        &-sm {
+            padding: 3rem 0;
+        }
+    }
+
+    @include susy-media($bp-xwide) {
+        padding: 6.5rem 0;
+
+        &-sm {
+            padding: 4rem 0;
+        }
+    }
+
+    @include susy-media($bp-massive) {
+        padding: 9rem 0;
+
+        &-sm {
+            padding: 4rem 0;
+        }
+    }
+
+    &.bg-alt {
+        background: $color-tertiary;
+    }
+
+    &-col {
+        .rows-3 & {
+            display: block;
+            margin: 0;
+            min-height: 200px;
+            text-align: center;
+            width: 100%;
+
+            &.no-mh {
+                min-height: 0;
+                padding: 0 1.5rem !important;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 3.5rem;
+            }
+
+            @include susy-media($bp-tablet) {
+                align-items: center;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: center;
+                width: 33.33%;
+
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include susy-media($bp-wide) {
+                padding: 0 2.5rem;
+            }
+
+            @include susy-media($bp-xwide) {
+                padding: 0 3rem;
+            }
+
+            @include susy-media($bp-massive) {
+                padding: 0 3.5rem;
+            }
+        }
+    }
+}

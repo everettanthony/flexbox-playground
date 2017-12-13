@@ -1,0 +1,72 @@
+﻿// -------------------------------------------
+// Border Box - Padding not included in width.
+// -------------------------------------------
+* { box-sizing: border-box; }
+
+
+// -------------
+// Global Styles
+// -------------
+html {
+	overflow-y: scroll;
+
+	// Font
+	font-family: $font-primary;
+    font-size: $base-font-size;
+    font-weight: $font-weight-regular;
+    line-height: $base-line-height;
+
+	// Prevent iOS, WinMobile from adjusting font size
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+
+    &.withdrawer {
+        height: 100%;
+        width: 100%;
+    }
+
+    &.modal-form-is-visible {
+        //overflow-y: hidden;
+    }
+}
+
+// ------------------
+// Global body styles
+// ------------------
+body {
+	// Color
+	background: $body-background;
+    color: $body-color;
+    //overflow-x: hidden;
+    text-align: left;
+
+    &.modal-in {
+        overflow: hidden;
+    }
+
+    .noscroll {
+        overflow: hidden !important;
+        max-height: 100%;
+    }
+}
+
+
+// ---------
+// Selection
+// ---------
+::-moz-selection{ background: #b3d4fc; color: #fff; }
+::selection{ background: #b3d4fc; color: #fff; }
+
+#content-wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: $hdr-height-mbl;
+
+    @include susy-media($bp-wide) {
+        padding-top: $hdr-height;
+
+        .fullscreen & {
+            padding-top: 0;
+        }
+    }
+}

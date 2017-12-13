@@ -1,0 +1,138 @@
+.form.form-frontend {
+    &.sm {
+        margin: 0 auto;
+        max-width: 340px;
+    }
+
+    .form-hdr {
+        font-family: $font-bold;
+        font-weight: $font-weight-light;
+        font-size: 3.125rem;
+        line-height: 1.25;
+        margin: 0 0 1.7rem;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include susy-media($bp-tablet) {
+            flex-direction: row;
+        }
+    }
+
+    .form-col {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+
+        &.sm {
+            max-width: 100%;
+            width: 35%;
+        }
+
+        &.lg {
+            max-width: 100%;
+            width: 65%;
+        }
+
+        &.nomax {
+            max-width: calc(800px + 1rem);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.25rem;
+        }
+
+        @include susy-media($bp-tablet) {
+            &:not(:last-child) {
+                margin: 0 1rem 0 0;
+            }
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea,
+    select {
+        background: #fff;
+        border: 1px solid $color-tertiary-dark !important;
+        box-shadow: 0 0 0 0 rgba(#fff, 0) !important;
+        font-size: 1rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        padding: 0 .8rem;
+        transition: border .125s ease;
+        @include set-placeholder-style(#c1c1c1);
+
+        &:focus {
+            border-color: darken($color-tertiary-dark, 10%) !important;
+        }
+    }
+
+    &#form-calc {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        textarea,
+        select {
+            height: 2.8rem;
+            line-height: 2.8rem;
+        }
+    }
+
+    textarea {
+        height: 6rem;
+    }
+
+    select,
+    option {
+        font-style: normal;
+    }
+
+    button {
+        background: $color-secondary;
+        border: 0;
+        border-bottom: 4px solid $color-secondary;
+        border-radius: 3px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: $font-weight-bold;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        outline: none;
+        padding: 0 .8rem;
+        text-align: center;
+        transition: background-color .125s ease, border .125s ease;
+        width: 100%;
+
+        &:hover {
+            background-color: darken($color-secondary, 2.5%);
+            border-bottom-color: darken($color-secondary-dark, 5%);
+        }
+
+        &.btn-sm {
+            height: 2.8rem;
+            line-height: 2.8rem;
+            min-width: 201px;
+            padding: 0 1.8rem;
+            width: auto;
+        }
+    }
+}
+
+#form-calc {
+    margin: 0 auto;
+    max-width: 800px;
+}

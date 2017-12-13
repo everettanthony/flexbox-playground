@@ -1,0 +1,8 @@
+﻿js/app/dev/*.js
+js/app/dev/**/*.js
+js/app/dev/**/**/*.js
+js/app/dist/*.js
+js/app/dist/**/*.js
+js/app/dist/**/**/*.js
+js/app/main.js
+js/app/libs/*.js

@@ -1,0 +1,279 @@
+.c-page-nav {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 1.5rem;
+
+    @include susy-media($bp-tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 0 2rem;
+    }
+
+    @include susy-media($bp-large) {
+        margin: 0 0 2.5rem;
+    }
+
+    @include susy-media($bp-wide) {
+        margin: 0 0 3rem;
+    }
+
+    @include susy-media($bp-xwide) {
+        margin: 0 0 4rem;
+    }
+
+    .page-nav-is-fixed & {
+        // background: #fff;
+        // left: calc((100vw - #{$max-width-px} - 14px) / 2);
+        // padding: 2rem;
+        // position: fixed;
+        // top: $hdr-height-mbl;
+        // width: calc(#{$max-width-px} - 2px);
+        // z-index: 2;
+
+        @include susy-media($bp-large) {
+            background: #fff;
+            left: calc((100vw - #{$max-width-px} - 14px) / 2);
+            padding: 2rem;
+            position: fixed;
+            top: $hdr-height-mbl;
+            width: calc(#{$max-width-px} - 2px);
+            z-index: 2;
+
+            &.scroll-full-width {
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        @include susy-media($bp-wide) {
+            top: $hdr-height;
+        }
+    }
+
+    a {
+        border: 1px solid #828282;
+        display: block;
+        font-size: .825rem;
+        height: 2.3rem;
+        line-height: 2.3rem;
+        padding: 0 2.5rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .1725s ease-out;
+        width: 280px;
+        @include link-colors(#828282, #fff);
+
+        &:hover,
+        &.is-selected {
+            background: #828282;
+            border-color: #828282;
+            color: #fff;
+        }
+
+        &:nth-child(n + 1) {
+            margin-top: .35rem;
+        }
+
+        @include susy-media($bp-tablet) {
+            display: inline-block;
+            margin-right: 1rem;
+
+            &:nth-child(n + 1) {
+                margin-top: 0;
+            }
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(n + 3) {
+                margin-top: .85rem;
+            }
+        }
+
+        @include susy-media($bp-large) {
+            width: auto;
+
+            &:nth-child(2n) {
+                margin-right: 1rem;
+            }
+
+            &:nth-child(n + 3) {
+                margin-top: 0;
+            }
+
+            &:nth-child(6n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(n + 7) {
+                margin-top: 1rem;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    input[type="text"] {
+        background: rgba(#fff, .425) !important;
+        border: 1px solid #828282 !important;
+        box-shadow: 0 0 0 0 transparent !important;
+        color: #828282 !important;
+        display: block !important;
+        font-size: .825rem !important;
+        //font-size: 1rem !important;
+        height: 2.3rem  !important;
+        line-height: 2.3rem !important;
+        margin: 0 !important;
+        padding: 0 .5rem !important;
+        width: 280px !important;
+        @include set-placeholder-style(#828282);
+
+        &:not(:first-child) {
+            margin-top: .35rem !important;
+        }
+
+        @include susy-media($bp-tablet) {
+            &:not(:first-child) {
+                margin-top: .85rem !important;
+            }
+        }
+
+        @include susy-media($bp-large) {
+            display: inline-block !important;
+            margin-top: 0 !important;
+            width: 260px !important;
+
+            &:not(:first-child) {
+                margin-top: 0 !important;
+            }
+        }
+    }
+
+    &-ddl {
+        border: 1px solid #828282;
+        display: block;
+        height: 2.3rem;
+        max-width: 100%;
+        padding: 0 2rem;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .1725s ease-out;
+        width: 280px;
+        z-index: 2;
+
+        &:hover {
+            background-color: #828282;
+            border-color: #828282;
+            color: #fff;
+        }
+
+        &:hover {
+            .c-page-nav-ddl-items {
+                opacity: 1;
+                top: -1px;
+                transform: translateY(0);
+            }
+        }
+
+        &:nth-child(n + 1) {
+            margin-top: .35rem;
+        }
+
+        @include susy-media($bp-tablet) {
+            display: inline-block;
+            margin-right: 1rem;
+
+            &:nth-child(n + 1) {
+                margin-top: 0;
+            }
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(n + 3) {
+                margin-top: .85rem;
+            }
+        }
+
+        @include susy-media($bp-large) {
+            width: 340px;
+
+            &:nth-child(2n) {
+                margin-right: 1rem;
+            }
+
+            &:nth-child(n + 3) {
+                margin-top: 0;
+            }
+
+            &:nth-child(6n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(n + 7) {
+                margin-top: 1rem;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &-lbl {
+            font-size: .825rem;
+            height: 2.3rem;
+            line-height: 2.3rem;
+            text-align: center;
+        }
+
+        &-items {
+            background: #fff;
+            box-shadow: 0 0 1px 1px rgba(#222, .125);
+            display: flex;
+            flex-direction: column;
+            font-size: .825rem;
+            left: -1px;
+            list-style: none;
+            margin: 0;
+            min-width: calc(100% + 2px);
+            opacity: 1;
+            position: absolute;
+            text-align: center;
+            top: -9999px;
+            transform: translateY(-1rem);
+            transition: opacity .2s ease-out,
+                        transform .2s ease-out;
+            z-index: 3;
+
+            @include susy-media($bp-comp) {
+                opacit: 0;
+            }
+        }
+
+        &-item {
+            background: #fff;
+            color: #828282;
+            cursor: pointer;
+            display: block;
+            height: 2.3rem;
+            line-height: 2.3rem;
+            padding: 0 1.5rem;
+            transition: all .125s ease;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: #828282;
+                border-color: #828282;
+                color: #fff;
+            }
+        }
+    }
+}

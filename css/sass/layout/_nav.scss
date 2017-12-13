@@ -1,0 +1,164 @@
+﻿// ---
+// Nav
+// ---
+#nav-main {
+    background: #fff;
+    height: calc(100vh - #{$hdr-height-mbl});
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 3.5rem 2rem;
+    position: fixed;
+    right: 0;
+    top: $hdr-height-mbl;
+    transform: translateX(100%);
+    transition: transform .3s ease-out;
+    width: 100%;
+    z-index: 1000;
+
+    .nav-in & {
+        transform: translateX(0);
+    }
+
+    @include susy-media($bp-wide) {
+        height: $hdr-height;
+        overflow: visible;
+        padding: 0;
+        position: absolute;
+        right: 2rem;
+        top: 0;
+        transform: translateX(0);
+        transition: none;
+        width: auto;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+
+        @include susy-media($bp-wide) {
+            flex-direction: row;
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+
+            @include susy-media($bp-wide) {
+                &:hover {
+                    .nav-sub {
+                        opacity: 1;
+                        top: 100%;
+                        transform: translateY(-1px);
+                    }
+                }
+            }
+        }
+
+        &.nav-sub {
+            background: #fff;
+            flex-direction: column;
+
+            li {
+                display: block;
+            }
+
+            a {
+                border-bottom: 0;
+                display: block;
+                font-size: 1.2125rem;
+                letter-spacing: normal;
+                padding: .75rem 1rem;
+                white-space: nowrap;
+            }
+
+            @include susy-media($bp-wide) {
+                box-shadow: 0 2px 1px 1px rgba(#222, .125);
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: -9999px;
+                transform: translateY(09px);
+                transition: opacity .3s ease-out, transform .325s ease-out;
+
+                a {
+                    font-size: .825rem;
+                    height: $hdr-height * .7;
+                    line-height: $hdr-height * .7;
+                    padding: 0 2rem 0 1.5rem;
+                }
+            }
+        }
+    }
+
+    a {
+        background: transparent;
+        border-bottom: solid 4px transparent;
+        display: inline-block;
+        font-size: 1.2125rem;
+        padding: .75rem 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .15s linear;
+        @include link-colors($color-primary, $color-primary-dark);
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        &.nav-parent-link {
+            margin-bottom: 0;
+            padding-bottom: .5rem;
+        }
+
+        &:hover,
+        &.is-selected {
+            background: $color-tertiary;
+            border-bottom-color: $color-primary;
+            color: $color-primary-dark;
+        }
+
+        &.alt {
+            border: 2px solid $color-secondary;
+            height: $hdr-height * .6;
+            line-height: $hdr-height * .6;
+            margin-left: .5rem;
+            padding: 0 1.75rem;
+            @include link-colors($color-secondary, #fff);
+
+            &:hover {
+                background: darken($color-secondary, 10%);
+                border-color: darken($color-secondary, 10%);
+            }
+        }
+
+        @include susy-media($bp-wide) {
+            font-size: 1rem;
+            height: $hdr-height;
+            line-height: $hdr-height;
+            padding: 0 1rem;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            &.alt {
+                transform: translateY(14px);
+            }
+        }
+
+        i {
+            //display: inline-block;
+            display: none;
+            margin: 0 .5rem 0 0;
+            transform: translateY(-1px);
+            vertical-align: middle;
+
+            img {
+                display: block;
+                width: 1.5rem;
+            }
+        }
+    }
+}

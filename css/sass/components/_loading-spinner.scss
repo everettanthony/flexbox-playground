@@ -1,0 +1,31 @@
+.loading-spinner,
+.loading-spinner:after {
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.loading-spinner {
+    animation: loadspinner 0.8s infinite linear;
+    border-top: .25rem solid rgba(#fff, 0.2);
+    border-right: .25rem solid rgba(#fff, 0.2);
+    border-bottom: .25rem solid rgba(#fff, 0.2);
+    border-left: .25rem solid #fff;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    vertical-align: middle;
+}
+
+@keyframes loadspinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

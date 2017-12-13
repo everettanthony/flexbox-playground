@@ -1,0 +1,47 @@
+﻿.hdr-bar {
+    @extend %position-fixed;
+    @extend .zdepth-1;
+    align-items: center;
+    background: $color-primary;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+    left: 0;
+    padding: 0 1rem;
+    top: 0;
+    width: 100%;
+    z-index: 8;
+
+    &-title {
+        @extend %display-inline-block;
+        font-size: 1.25rem;
+        font-weight: normal;
+        line-height: 1;
+    }
+    
+    @include susy-media($bp-comp) {
+        left: 300px;
+        padding: 0 2rem;
+        width: calc(100% - 300px);
+    }
+}
+
+.hdr-nav-trigger {
+    @extend %display-inline-block;
+    background: none;
+    border: none;
+    margin: 0 0.5rem 0 -0.5rem;
+    padding: 0 .5rem;
+    @include link-colors($white, $white);
+
+    i {
+        font-size: 1.75rem;
+        height: 56px;
+        line-height: 56px;
+    }
+
+    @include susy-media($bp-comp) {
+        display: none;
+    }
+}

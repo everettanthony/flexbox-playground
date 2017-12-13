@@ -1,0 +1,211 @@
+.c-banner {
+    @extend .bg-cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - #{$hdr-height-mbl});
+    padding: 2rem 1.5rem;
+    position: relative;
+
+    &-sm {
+        height: 33vh;
+        justify-content: flex-start;
+        min-height: 33vh;
+    }
+
+    @include susy-media($bp-tablet) {
+        min-height: 100vh;
+        padding: 2rem 0;
+
+        &-sm {
+            height: 33vh;
+            min-height: 33vh;
+        }
+    }
+
+    @include susy-media($bp-wide) {
+        padding: 4rem 0;
+    }
+
+    @include susy-media($bp-xwide) {
+        padding: 8rem 0;
+    }
+
+    $v: v5;
+    $pages: home home2 home3 events locations contact;
+    @each $page in $pages {
+        &-#{$page} {
+            background-image: url(/img/#{$page}/banner/massive.#{$v}.jpg);
+        }
+    }
+
+    &-team {
+        background-image: url(/img/about/team/banner/massive.#{$v}.jpg);
+    }
+
+    &-overlay {
+        background: linear-gradient(to bottom, rgba(darken($color-primary, 10%), .425), rgba(darken($color-primary, 10%), .825));
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &-content {
+        color: #fff;
+        max-width: 52.5rem;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+
+        .c-banner-sm & {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .l-content-container {
+            width: 100%;
+        }
+    }
+
+    &-hdr {
+        font-family: $font-bold;
+        font-size: 2.525rem;
+        font-weight: $font-weight-light;
+        line-height: 1;
+        margin: 0 0 1rem;
+        text-transform: uppercase;
+
+        .c-banner-sm & {
+            overflow: hidden;
+            padding-top: 8rem;
+            text-align: left;
+
+            span {
+                display: block;
+                opacity: 0;
+                transform: translateY(3rem);
+                transition: opacity .45s ease-out,
+                            transform .575s ease-out;
+            }
+
+            &.is-visible {
+                span {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @include susy-media($bp-massive) {
+                padding-top: 10rem;
+            }
+        }
+
+        @include susy-media($bp-tablet) {
+            font-size: 3.8rem;
+        }
+
+        @include susy-media($bp-large) {
+            font-size: 4.1rem;
+        }
+
+        @include susy-media($bp-wide) {
+            font-size: 4.4rem;
+        }
+
+        @include susy-media($bp-xwide) {
+            font-size: 4.7rem;
+        }
+
+        @include susy-media($bp-massive) {
+            font-size: 5rem;
+        }
+    }
+
+    &-copy {
+        margin-bottom: 2.5rem;
+
+        p {
+            font-size: 1rem;
+            line-height: 1.65;
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+
+            @include susy-media($bp-tablet) {
+                font-size: 1.15rem;
+            }
+        }
+    }
+
+    &-cta {
+        background: rgba(#fff, 0);
+        border: 1px solid #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: $font-weight-bold;
+        padding: 1rem 2.8rem;
+        text-decoration: none;
+        transition: background-color .225s ease,
+                    color .225s ease;
+        @include link-colors(#fff, $color-primary);
+
+        &:hover {
+            background: #fff;
+        }
+    }
+
+    &-arrow-down {
+        animation-delay: 1s;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-name: arrowDownUp;
+        background: none;
+        border: 0;
+        bottom: 1.5rem;
+        cursor: pointer;
+        left: 50%;
+        outline: none;
+        padding: .5rem;
+        position: absolute;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        @include susy-media($bp-tablet) {
+            bottom: 2.5rem;
+        }
+    }
+}
+
+@keyframes arrowDownUp {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(.4rem);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes arrowDownUpOnly {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

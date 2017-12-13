@@ -1,0 +1,30 @@
+﻿.toast {
+    @extend %position-fixed;
+    background: rgba(20, 20, 20, .9);
+    bottom: 0;
+    color: $white;
+    font-size: .9rem;
+    left: 0;
+    max-width: 400px;
+    min-width: 260px;
+    opacity: 0;
+    padding: .5rem 1rem;
+    transform: translateY(200px);
+    transition: opacity .275s ease-out,
+                transform .275s ease-out;
+    width: 100%;
+    will-change: opacity, transform;
+    z-index: 999;
+    
+    &-is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @include susy-media($bp-tablet) {
+        border-radius: 2px;
+        bottom: 1rem;
+        left: 1rem;
+        width: auto;
+    }
+}

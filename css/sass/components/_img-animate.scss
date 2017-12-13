@@ -1,0 +1,43 @@
+.img-animate {
+    margin: 3.5rem 0 4rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform .25s ease-out;
+
+    .team-grid-item & {
+        margin: 0;
+    }
+
+    &-overlay {
+        background: rgba(#222, .345);
+        height: 100%;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        transition: all .25s ease-out;
+        width: 100%;
+        z-index: 2;
+    }
+
+    img {
+        transition: opacity .4s ease,
+                    transform .25s ease-out;
+    }
+
+    &:hover {
+        transform: scale(.95);
+
+        .team-grid-item & {
+            transform: scale(.95);
+        }
+
+        .img-animate-overlay {
+            opacity: 0;
+        }
+
+        img {
+            transform: scale(1.075);
+        }
+    }
+}

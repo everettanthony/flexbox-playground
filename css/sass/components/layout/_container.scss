@@ -1,0 +1,12 @@
+﻿.container-main {
+    @extend %position-relative;
+    padding: 1rem;
+    top: 56px;
+    z-index: 0;
+
+    @include susy-media($bp-comp) {
+        left: 300px;
+        padding: 2rem;
+        width: calc(100% - 300px);
+    }
+}

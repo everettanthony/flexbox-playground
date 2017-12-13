@@ -1,0 +1,11 @@
+.img-lazy {
+    opacity: .4;
+
+    &-not-loaded {
+        transition: opacity .4s ease !important;
+    }
+
+    &-loaded {
+        opacity: 1;
+    }
+}

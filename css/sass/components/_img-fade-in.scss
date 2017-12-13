@@ -1,0 +1,28 @@
+.img-fade-in {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: opacity .925s ease-out .175s,
+                transform 1s cubic-bezier(0, 0, 0.3, 1) .175s !important;
+
+    &.img-right {
+        //transform: translateX(6rem);
+    }
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &.no-transform {
+        transform: translateY(0);
+    }
+}
+
+.img-fade-in-op {
+    opacity: 0;
+    transition: opacity .925s ease-out .175s;
+
+    &.is-visible {
+        opacity: 1;
+    }
+}

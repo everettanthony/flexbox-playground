@@ -1,0 +1,85 @@
+﻿// -----------------
+// Project Variables
+// -----------------
+
+
+// ----------------------
+// Dimensions + Grid Vars
+// ----------------------
+$max-width-px:		1600px;
+$base-font-size:	16px;
+$base-line-height:	22px;
+$hdr-height: 72px;
+$hdr-height-mbl: 67px;
+
+
+// Susy Settings
+$total-columns:	12;
+$column-width:	4em;
+
+
+// -------------------
+// Typography Settings
+// -------------------
+$font-primary: 'Noto Sans', sans-serif;
+$font-secondary: 'trumpsoftpro', serif;
+$font-bold: 'Source Sans Pro';
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// --------------------------
+// Colors
+// --------------------------
+
+// Primary Colors
+$color-primary: #153177; //#16398C; // #30394e;
+$color-primary-dark: darken($color-primary, 7.5%);
+$color-primary-light: lighten($color-primary, 7.5%);
+
+// Secondary Colors
+$color-secondary: #ED2D30; //#EF4040; // #e2574c;
+$color-secondary-dark: darken($color-secondary, 7.5%);
+$color-secondary-light: lighten($color-secondary, 7.5%);
+
+$color-tertiary: #F2F2F8;
+$color-tertiary-dark: darken($color-tertiary, 7.5%);
+$color-tertiary-light: lighten($color-tertiary, 7.5%);
+
+// Helper Colors
+$white: #fff;
+$black: #000;
+
+
+// Alert/Messaging Colors
+$warning-text:		#c09853;
+$warning-bg:		#fcf8e3;
+$warning-border:	darken(adjust-hue($warning-bg, -10), 3%);
+
+$error-text:		#b94a48;
+$error-bg:			#f2dede;
+$error-border:		darken(adjust-hue($error-bg, -10), 3%);
+
+$success-text:		#468847;
+$success-bg:		#dff0d8;
+$success-border:	darken(adjust-hue($success-bg, -10), 5%);
+
+$info-text:			#3a87ad;
+$info-bg:			#d9edf7;
+$info-border:		darken(adjust-hue($info-bg, -10), 7%);
+
+
+// --------------------------
+// Default Body Styles
+// --------------------------
+$body-background:	$white;
+$body-color:		#303030;
+
+
+// --------------------------
+// Links
+// --------------------------
+$link-color:		$color-secondary;
+$link-color-hover:	darken($link-color, 15%);

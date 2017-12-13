@@ -1,0 +1,70 @@
+﻿// ------
+// Header
+// ------
+#hdr-main {
+    background: #fff;
+    box-shadow: 0 1px 1px 1px rgba(#222, .125);
+    left: 0;
+    padding: .5rem 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+    @include susy-media($bp-wide) {
+        height: $hdr-height;
+        padding: .5rem 2rem;
+    }
+}
+
+#masthead {
+    display: inline-block;
+    max-width: 230px;
+
+    @include susy-media($bp-wide) {
+        max-width: 100%;
+    }
+}
+
+#btn-nav-trigger {
+    background: none;
+    border: 0;
+    height: 1.25rem;
+    padding: 0;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.7rem;
+
+    span {
+        border-top: 2px solid $color-primary;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        &:before,
+        &:after {
+            border-top: 2px solid $color-primary;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60%;
+        }
+
+        &:after {
+            bottom: -1px;
+            top: auto;
+            transform: translateY(0);
+            width: 82.5%;
+        }
+    }
+
+    @include susy-media($bp-wide) {
+        display: none;
+    }
+}
