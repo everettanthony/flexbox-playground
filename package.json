@@ -15,6 +15,7 @@
   "dependencies": {
     "babel-preset-es2015-native-modules": "^6.9.4",
     "express": "^4.16.2",
+    "hoek": "^5.0.3",
     "pre-commit": "^1.2.2"
   },
   "homepage": "https://github.com/everettanthony/flexbox-playground",
